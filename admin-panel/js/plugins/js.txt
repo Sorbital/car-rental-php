@@ -1,0 +1,110 @@
+=== LOGIC ===
+$(".prod-img").css("position", "absolute");
+$(".prod-img").css("transition", "all ease 0.4s");
+var x = Math.random()*100; 
+var y = Math.random()*100; 
+$(".prod-img").css("top", "+="+x);
+$(".prod-img").css("left", "+="+y);
+=== LOGIC ===
+
+=== TEST LOGIC ===
+document.getElementsByClassName("prod-img")[0].style.transition="all ease 0.4s";
+document.getElementsByClassName("prod-img")[0].style.height="20px";
+document.getElementsByClassName("prod-img")[0].style.width="20px";
+document.getElementsByClassName("prod-img")[0].style.width="20px";
+document.getElementsByClassName("prod-img")[0].style.position="absolute";
+document.getElementsByClassName("prod-img")[0].style.top=Math.random()*100+"px";
+document.getElementsByClassName("prod-img")[0].style.left=Math.random()*100+"px";
+
+document.getElementsByClassName("prod-img")[0].style.transition="all ease 0.4s";
+document.getElementsByClassName("prod-img")[0].style.height="200px";
+document.getElementsByClassName("prod-img")[0].style.width="200px";
+document.getElementsByClassName("prod-img")[0].style.zindex="99999999999999";
+document.getElementsByClassName("prod-img")[0].style.position="absolute";
+document.getElementsByClassName("prod-img")[0].style.top=Math.random()*1000+"px";
+document.getElementsByClassName("prod-img")[0].style.left=Math.random()*100+"px";
+=== TEST LOGIC ===
+
+=== TEST ===
+for(var i=0;i<document.getElementsByClassName("prod-img").length;i++){
+	console.log(document.getElementsByClassName("prod-img")[i]);
+	this.addEventListener("mouseover", function(e){
+		console.log("a");
+		console.log(e);
+		console.log("b");
+	});
+}
+=== TEST ===
+
+=== LIVE ===
+for(var i=0;i<document.getElementsByClassName("prod-img").length;i++){
+	console.log(i);
+	document.getElementsByClassName("prod-img")[i].addEventListener("mouseover", function(e){
+		e.target.style.transition="all ease 0.4s";
+		e.target.style.height="200px";
+		e.target.style.width="200px";
+		e.target.style.zindex="99999999999999";
+		e.target.style.position="absolute";
+		e.target.style.top=Math.random()*1000+"px";
+		e.target.style.left=Math.random()*1000+"px";
+	});
+}
+=== LIVE ===
+for(var i=0;i<document.getElementsByClassName("prod").length;i++){
+	document.getElementsByClassName("prod")[i].addEventListener("mouseover", function(e){
+		e.target.style.transition="all ease 0.4s";
+		if(e.target.width<200){e.target.style.width="200px";}
+		e.target.style.zindex="99999999999999";
+		e.target.style.position="absolute";
+		e.target.style.top=Math.random()*1000+"px";
+		e.target.style.left=Math.random()*1000+"px";
+	});
+}
+==========================
+==========================
+/*e.target.style.height="200px";
+e.target.style.width="200px";*/
+==========================
+=== LIVE ===
+for(var i=0;i<document.getElementsByTagName("img").length;i++){
+	document.getElementsByTagName("img")[i].addEventListener("mouseover", function(e){
+		e.target.style.transition="all ease 0.4s";
+		e.target.style.zindex="99999999999999";
+		e.target.style.position="absolute";
+		e.target.style.top=Math.random()*1000+"px";
+		e.target.style.left=Math.random()*1000+"px";
+	});
+}
+==========================
+===============================
+TEST - DEBUG
+===============================
+for(var i=0;i<document.getElementsByClassName("prod").length;i++){
+	document.getElementsByClassName("prod")[i].addEventListener("mouseover", function(e){
+		console.log(e);
+	});
+}
+
+===============================
+GMAIL
+===============================
+for(var i=0;i<document.getElementsByClassName("zA zE").length;i++){
+	document.getElementsByClassName("zA zE")[i].addEventListener("mouseover", function(e){
+		e.target.style.transition="all ease 0.4s";
+		if(e.target.width<200){e.target.style.width="200px";}
+		e.target.style.zindex="99999999999999";
+		e.target.style.position="absolute";
+		e.target.style.top=Math.random()*1000+"px";
+		e.target.style.left=Math.random()*1000+"px";
+	});
+}
+for(var i=0;i<document.getElementsByTagName("tr").length;i++){
+	document.getElementsByTagName("tr")[i].addEventListener("mouseover", function(e){
+		e.target.style.transition="all ease 0.4s";
+		e.target.style.zindex="99999999999999";
+		e.target.style.position="absolute";
+		e.target.style.top=Math.random()*1000+"px";
+		e.target.style.left=Math.random()*1000+"px";
+	});
+}
+for(var i=0;i<document.getElementsByTagName("tr").length;i++){document.getElementsByTagName("tr")[i].addEventListener("mouseover", function(e){e.target.style.transition="all ease 0.4s";e.target.style.zindex="99999999999999";e.target.style.position="absolute";e.target.style.top=Math.random()*1000+"px";e.target.style.left=Math.random()*1000+"px";});}
